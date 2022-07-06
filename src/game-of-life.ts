@@ -2,7 +2,12 @@ import * as _ from "lodash";
 import { defaultRules } from "./engine/config";
 
 import { Cell, Rules, State, Vector } from "./engine/types";
-import { cloneState, getCellDistance, getDistance, isValidPosition } from "./engine/util";
+import {
+  cloneState,
+  getCellDistance,
+  getDistance,
+  isValidPosition,
+} from "./engine/util";
 
 export * from "./engine/";
 

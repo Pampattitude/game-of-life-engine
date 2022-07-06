@@ -1,6 +1,6 @@
-import * as _ from 'lodash';
+import * as _ from "lodash";
 
-import { Cell, State, Vector } from './types';
+import { Cell, State, Vector } from "./types";
 
 export function cloneState(initialState: State) {
   return _.cloneDeep(initialState);
@@ -22,4 +22,3 @@ export function isValidPosition(position: Vector, dimensions: Vector) {
     position.y >= dimensions.y
   );
 }
-
