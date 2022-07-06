@@ -3,10 +3,7 @@ import {
   computeNextState,
   drawState,
 } from "./game-of-life";
-
-function wait(time: number) {
-  return new Promise((resolve) => setTimeout(() => resolve(null), time));
-}
+import { wait } from "./util";
 
 (async () => {
   const initialState = computeCellNeighbors({
@@ -47,7 +44,7 @@ function wait(time: number) {
   const frameRate = 6;
   for (let i = 0; frames > i; ++i) {
     await wait(1000 / frameRate);
-    
+
     newState = computeNextState(newState);
     console.log();
     console.log(drawState(newState));
